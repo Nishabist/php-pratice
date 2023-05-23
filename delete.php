@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+if(!isset($_SESSION['id'])){
+    header('Location:login.php');
+    exit();
+}
 require_once 'database_connect.php';
 
 if($id=$_GET['id']){
