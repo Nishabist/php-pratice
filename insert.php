@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+if(!isset($_SESSION['id'])){
+    header('Location:login.php');
+    exit();
+}
+
 require_once'database_connect.php';
 if(isset($_POST['name'])){
     $name=$_POST['name'];

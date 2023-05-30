@@ -14,6 +14,7 @@ $result =$conn->query($sql);
 
 if($result->num_rows>0){
     //output data from each row
+    echo '<a href="insert.php">Add Record</a><br>';
     echo'<a href="logout.php">Logout</a>';
     echo'<table cellspacing="10px" cellpadding="10px">';
     echo '<tr><th>S.N</th><th>Name</th><th>Program</th><th>Address</th><th>Rollno</th><th>email</th><th>Action</th><tr>'
